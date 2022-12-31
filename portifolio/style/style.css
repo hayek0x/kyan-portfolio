@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+:root {
+    --bg-dark: #212226;
+    --main-color: #00e8ff;
+}
+
+::-webkit-scrollbar {
+
+    width: 14px;  
+  }
+  
+::-webkit-scrollbar-track {
+    background: #000; 
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: #00e8ff;    
+    border-radius: 20px;       
+    border: 4px solid #000;  
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    
+    color: #fff;
+    background: #000;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+header {
+    padding: 0 4em;
+    margin-top: 15px;
+    margin-bottom: 60px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 35px;
+    letter-spacing: 3px;
+    color: var(--main-color);
+}
+
+header nav {
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+header nav a {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 25px;
+
+    transition: color, 1s;
+}
+
+header nav a:hover {
+    color: #00e8ff;
+}
+
+header nav .button {
+    padding: 8px 16px 8px;
+    color: #000;
+    border-radius: 2em;
+    background: #00e8ff;
+
+}
+
+header nav .button:hover {
+    background: #000;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .main-content {
+    margin-top: 6em;
+}
+
+main .main-content h2{
+    margin-left: 4em;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+main .main-content span {
+    font-size: 0.8em;
+    color: #00e8ff;
+}
+
+main .main-content p {
+    width: 45%;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-left: 30px;
+}
+
+figure {
+    margin-left: 47em;
+    position: relative;
+    bottom: 12em;
+}
+
+figure img {
+    box-shadow: 0px 0px 20px #00eaff65;
+    border-radius: 2em;
+}
+#waving_hand {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+
+aside {
+    height: 100vh;
+    width: 100%;
+}
+
+.cards-container {
+    margin-top: 5em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.cards-container .card {
+    box-shadow: 0px 0px 20px #00eaff65;
+    border-radius: 2em;
+    height: 50vh;
+
+    margin: 0px 5em;
+    margin-top: 7em;
+    width: 20%;
+    transition: transform, 2s;
+    cursor: pointer;
+}
+
+#eu {
+    cursor: pointer;
+    transition: transform, 2s;
+}
+.cards-container .card:hover, #eu:hover {
+    transform: scale(1.10,1.10);
+}
+.card span, #robot  {
+    margin-top: 30px;
+    font-size: 3em;
+    color: #00e8ff;
+    margin-bottom: 10px;
+}
+
+.card h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.vertical-1 {
+    border-radius: 2em;
+    border-left: 6px solid #00eaff65;
+    height: 200px;
+    position:absolute;
+    left: 32.1%;
+    top: 57rem;
+}
+
+.vertical-2 {
+    border-radius: 2em;
+    border-left: 6px solid #00eaff65;
+    height: 200px;
+    position:absolute;
+    top: 57rem;
+    left: 64%;
+}
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) } 
+  100% { transform: rotate( 0.0deg) }
+}
+
+footer {
+    height: 20vh;
+    text-align: center;
+}
+
+footer h1 {
+    margin-bottom: 5px;
+    font-size: 1.8em;
+}
+footer a {
+    margin: 0px 10px;
+    font-size: 1.4em;
+    color: #00e8ff;
+
+    box-shadow: 0px 0px 8px #fff;
+    padding: 10px 10px 10px;
+    border-radius: 2em;
+    background: #fff;
+}
+
+#twitter, #instagram, #email {
+    padding: 10px 13px 10px;
+}
+
+#instagram {
+    padding: 10px 14px 10px;
+}
+
+#youtube {
+    padding: 10px 12px 10px;
+}
+
+footer nav {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
